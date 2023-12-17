@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle, rgba(238,14,20,1) 24%, rgba(148,187,239,1) 30%,rgba(128,137,230,1) 35%,rgba(148,187,239,0) 18%);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(173, 225, 238);
+    opacity: 17.5;
+}
+
+/* for making circle */
+.clock{
+    background-image: url('img1.jpg'); 
+    width: 340px;
+    height: 340px;
+    border: 15px solid rgb(173, 225, 238);
+     border-radius: 50%; 
+    color: rgb(242, 240, 255);
+    font-size: 38px;
+    font-weight:bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+    opacity:17.2;
+}
+/* for counting's stylling */
+   .clock ul li{
+    list-style:none;
+    position: absolute;
+    text-align: center;
+    transform: rotate(calc(30deg * var(--i)));
+    inset: 6px; 
+    cursor: pointer;
+    
+}
+/* styling for rotation of countings */
+ .clock ul li span{
+    transform: rotate(calc(-30deg * var(--i)));
+    display: inline-block;
+
+} 
+/* styling for center dot */
+   .clock::after{
+    content: 'NEVER OR NOW   ';
+    font-size:large;
+    color: 65px solid black;
+    width: 13px; 
+    height: 12px;
+    background-color: greenyellow;  
+    border-radius: 50%;
+    position: absolute;
+    border: 3px solid red; 
+   }
+
+.needle{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+/* For needle's design in ul*/
+.needle span{
+    width: 10px; 
+    height: var(--h);
+    background-color: var(--clr); 
+    position: absolute;
+    cursor: pointer;
+    border-radius: 13px;
+    
+}
